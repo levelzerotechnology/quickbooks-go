@@ -127,7 +127,6 @@ func (c *Client) req(method string, endpoint string, payloadData interface{}, re
 		if err != nil {
 			return fmt.Errorf("failed to marshal payload: %v", err)
 		}
-		fmt.Println(string(marshalledJson))
 	}
 
 	req, err := http.NewRequest(method, endpointUrl.String(), bytes.NewBuffer(marshalledJson))
